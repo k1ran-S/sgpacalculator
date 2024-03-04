@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        table, th{
+        padding: 0.5%;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        tr{
+            padding: 0.5%;
+        }
+    </style>
+</head>
+<body bgcolor = "#80FFEC">
+    <form action="/" method="POST">
+        <center><b><h1 style="font-size: 400%; color: #0ea7e4;">Welcome!</h1></b></center>
+        <table style="display: flex; align-items: center; justify-content: center;">
+            <tr style="margin-top: 10%;">
+                <th align="left">Subjects</th>
+                <th align="left">Marks</th>
+                <th align="left">Credits</th>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>AV Mathematics III </td>
+                <td><input type="text" name="maths"></td>
+                <td align="center">3</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Digital Systems Design using Verilog</td>
+                <td><input type="text" name="dsdv"></td>
+                <td align="center">4</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Electronics Principles and Circuits</td>
+                <td><input type="text" name="epc"></td>
+                <td align="center">4</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Network Analysis</td>
+                <td><input type="text" name="na"></td>
+                <td align="center">3</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Analog and Digital System Design Lab</td>
+                <td><input type="text" name="adsd"></td>
+                <td align="center">1</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Computer Organisation and Architecture</td>
+                <td><input type="text" name="coa"></td>
+                <td align="center">3</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Social Connect and Responsibility</td>
+                <td><input type="text" name="scr"></td>
+                <td align="center">1</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>AEC Labview</td>
+                <td><input type="text" name="labview"></td>
+                <td align="center">1</td>
+            </tr>
+            <tr style="margin-top: 10%;">
+                <td>Yoga</td>
+                <td><input type="text" name="yoga"></td>
+                <td align="center">0</td>
+            </tr>
+        </table>
+        <center><button type="submit" value="submit" style="height: 50px; width: 100px;" >Calculate</button></center>
+    </form>
+{%if gpa%}
+<CEnter>
+<table>
+    <tr align="left"><th>Subjects </th><th>Marks </th><th>Grades</th><th>Grade*Credits </th></tr>
+    <tr align="left"><td>AV Mathematics III</td><td>{{M[0]}}</td><td>{{Grade_points[0]}}</td><td>{{GxC[0]}}</td></tr>
+    <tr align="left"><td>Digital Systems Design using Verilog</td><td>{{M[1]}}</td><td>{{Grade_points[1]}}</td><td>{{GxC[1]}}</td></tr>
+    <tr align="left"><td>Electronics Principles and Circuits</td><td>{{M[2]}}</td><td>{{Grade_points[2]}}</td><td>{{GxC[2]}}</td></tr>
+    <tr align="left"><td>Netwrok Analysis</td><td>{{M[3]}}</td><td>{{Grade_points[3]}}</td><td>{{GxC[3]}}</td></tr>
+    <tr align="left"><td>Analog and Digital Systems Design</td><td>{{M[4]}}</td><td>{{Grade_points[4]}}</td><td>{{GxC[4]}}</td></tr>
+    <tr align="left"><td>Computer Organisation and Architecture</td><td>{{M[5]}}</td><td>{{Grade_points[5]}}</td><td>{{GxC[5]}}</td></tr>
+    <tr align="left"><td>Social Connect and Responsibility</td><td>{{M[6]}}</td><td>{{Grade_points[6]}}</td><td>{{GxC[6]}}</td></tr>
+    <tr align="left"><td>AEC LabView</td><td>{{M[7]}}</td><td>{{Grade_points[7]}}</td><td>{{GxC[7]}}</td></tr>
+    <tr align="left"><td>Yoga</td><td>{{M[8]}}</td><td>{{Grade_points[8]}}</td><td>{{GxC[8]}}</td></tr>
+</table>
+<p>Your GPA is {{gpa}}</p></CEnter>
+{%endif%}
+</body>
+</html>
